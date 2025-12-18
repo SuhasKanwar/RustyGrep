@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "Project_018_RustyGrep"
+name = "RustyGrep"
 version = "0.1.0"
