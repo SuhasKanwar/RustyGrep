@@ -2,7 +2,7 @@ use std::env;
 use std::fs;
 use std::process;
 use std::error::Error;
-use RustyGrep::search;
+use rusty_grep::search;
 
 struct Config {
     query: String,
@@ -15,8 +15,8 @@ impl Config {
             return Err("Not enough arguments!!!");
         }
 
-        let query = args[1].clone();
-        let file_path = args[2].clone();
+        let query: String = args[1].clone();
+        let file_path: String = args[2].clone();
 
         Ok(Self { query, file_path })
     }
