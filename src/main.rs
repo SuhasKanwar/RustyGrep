@@ -32,12 +32,12 @@ fn main() {
     let args: Vec<String> = env::args().collect();
     
     let config: Config = Config::build(&args).unwrap_or_else(|err: &'static str| {
-        println!("Problem parsing the arguments -> {err}");
+        eprintln!("Problem parsing the arguments -> {err}");
         process::exit(1);
     });
 
     if let Err(e) = run(config) {
-        println!("Application Error -> {e}");
+        eprintln!("Application Error -> {e}");
         process::exit(1);
     }
 }
